@@ -15,20 +15,24 @@ bool AppDelegate::applicationDidFinishLaunching() {
     // initialize director
     auto director = Director::getInstance();
     auto glview = director->getOpenGLView();
+    
     if(!glview)
     {
-        glview = GLView::create("My Game");
+        glview = GLView::create("Tactics Team");
         director->setOpenGLView(glview);
-        if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
-        {
-            
-        }
-        glview->setFrameSize(1024, 768);
     }
 
     // turn on display FPS
+#ifdef DEBUG_FPS
     director->setDisplayStats(true);
+#endif
 
+    //set screen resolution on different platforms
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_WIN32 || CC_TARGET_PLATFORM == CC_PLATFORM_MAC)
+    director->getOpenGLView()->setFrameSize(1024.0f, 768.0f);
+#endif
+    director->getOpenGLView()->setDesignResolutionSize(1024.0f, 768.0f, ResolutionPolicy::FIXED_HEIGHT);
+    
     // set FPS. the default value is 1.0/60 if you don't call this
     director->setAnimationInterval(1.0 / 60);
 

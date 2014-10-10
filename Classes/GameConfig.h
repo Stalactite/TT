@@ -9,7 +9,7 @@
 #ifndef TT_GameConfig_h
 #define TT_GameConfig_h
 
-#define DEBUG_FPS
+#define DEBUG_FPS //open or close fps information display on screen
 
 
 #endif
