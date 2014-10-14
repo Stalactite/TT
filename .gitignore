@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 cocos2d/cocos/2d/Debug.win32/CL.1456.read.1.tlog
 cocos2d/cocos/2d/Debug.win32/CL.1456.write.1.tlog
 cocos2d/cocos/2d/Debug.win32/CL.3264.read.1.tlog
@@ -200,6 +201,16 @@ proj.win32/Debug.win32/link.write.1.tlog
 proj.win32/Debug.win32/rc.command.1.tlog
 proj.win32/Debug.win32/rc.read.1.tlog
 proj.win32/Debug.win32/rc.write.1.tlog
+=======
+*.tlog
+cocos2d/cocos/2d/Debug.win32/libcocos2d.lastbuildstate
+cocos2d/cocos/audio/proj.win32/Debug.win32/libAudio.lastbuildstate
+cocos2d/cocos/audio/proj.win32/Debug.win32/vc110.idb
+cocos2d/external/chipmunk/proj.win32/Debug.win32/libchipmunk.lastbuildstate
+cocos2d/external/chipmunk/proj.win32/Debug.win32/vc110.idb
+proj.win32/Debug.win32/TT.lastbuildstate
+proj.win32/Debug.win32/game.res
+>>>>>>> parent of d75b9c4... Revert "add splash screen relative"
 proj.win32/Debug.win32/vc110.idb
 proj.win32/TT.opensdf
 proj.win32/TT.sdf
