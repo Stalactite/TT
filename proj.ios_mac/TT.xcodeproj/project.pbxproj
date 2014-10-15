@@ -63,6 +63,12 @@
 		50EF62A217ECD613001EB2F8 /* Icon-29.png in Resources */ = {isa = PBXBuildFile; fileRef = 50EF62A017ECD613001EB2F8 /* Icon-29.png */; };
 		50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 50EF62A117ECD613001EB2F8 /* Icon-50.png */; };
 		ABCBC23019E77840007D8B7D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABCBC22F19E77840007D8B7D /* Images.xcassets */; };
+		B82CF70871E5BC102F13D247 /* SplashScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B82CF2D2DD254F74647ED01C /* SplashScene.cpp */; };
+		B82CF94825A451AF5E6F10CB /* SplashScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B82CF2D2DD254F74647ED01C /* SplashScene.cpp */; };
+		B82CF9B4BAE19BE0F02DFA1D /* SplashLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B82CFE924AD45A4FE38B5083 /* SplashLayer.cpp */; };
+		B82CFA5EE6A071289AC0B51D /* SplashLayers in Resources */ = {isa = PBXBuildFile; fileRef = B82CF03146656BD517495C1D /* SplashLayers */; };
+		B82CFBD9AF5738AFE7D888F6 /* SplashLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B82CFE924AD45A4FE38B5083 /* SplashLayer.cpp */; };
+		B82CFFC24DAD540AB97CC94B /* SplashLayers in Resources */ = {isa = PBXBuildFile; fileRef = B82CF03146656BD517495C1D /* SplashLayers */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
@@ -265,6 +271,11 @@
 		ABBC255A19E8316400DB2EAA /* GameMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameMacro.h; path = ../Classes/GameMacro.h; sourceTree = "<group>"; };
 		ABBC255F19E833AD00DB2EAA /* GameHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameHeader.h; path = ../Classes/GameHeader.h; sourceTree = "<group>"; };
 		ABCBC22F19E77840007D8B7D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "TT iOS/Images.xcassets"; sourceTree = SOURCE_ROOT; };
+		B82CF03146656BD517495C1D /* SplashLayers */ = {isa = PBXFileReference; lastKnownFileType = folder; path = SplashLayers; sourceTree = "<group>"; };
+		B82CF2D2DD254F74647ED01C /* SplashScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SplashScene.cpp; sourceTree = "<group>"; };
+		B82CFAE6E3E0234889735DB2 /* SplashScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashScene.h; sourceTree = "<group>"; };
+		B82CFE924AD45A4FE38B5083 /* SplashLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SplashLayer.cpp; sourceTree = "<group>"; };
+		B82CFEC162A5E9FE5BD98EE6 /* SplashLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashLayer.h; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -348,6 +359,7 @@
 				ABBC255719E830EB00DB2EAA /* GameConfig.h */,
 				ABBC255A19E8316400DB2EAA /* GameMacro.h */,
 				ABBC255F19E833AD00DB2EAA /* GameHeader.h */,
+				B82CF4973147067E79E5A10E /* SplashLayers */,
 			);
 			name = Classes;
 			path = ../classes;
@@ -467,9 +479,21 @@
 				1AFAF8B916D35E4900DB1158 /* CloseNormal.png */,
 				1AFAF8BA16D35E4900DB1158 /* CloseSelected.png */,
 				1AFAF8BB16D35E4900DB1158 /* HelloWorld.png */,
+				B82CF03146656BD517495C1D /* SplashLayers */,
 			);
 			name = Resources;
 			path = ../Resources;
+			sourceTree = "<group>";
+		};
+		B82CF4973147067E79E5A10E /* SplashLayers */ = {
+			isa = PBXGroup;
+			children = (
+				B82CFE924AD45A4FE38B5083 /* SplashLayer.cpp */,
+				B82CFEC162A5E9FE5BD98EE6 /* SplashLayer.h */,
+				B82CF2D2DD254F74647ED01C /* SplashScene.cpp */,
+				B82CFAE6E3E0234889735DB2 /* SplashScene.h */,
+			);
+			path = SplashLayers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -656,6 +680,7 @@
 				5087E78417EB970100C73F5D /* Icon-57.png in Resources */,
 				5087E77E17EB970100C73F5D /* Default.png in Resources */,
 				50EF629717ECD46A001EB2F8 /* Icon-58.png in Resources */,
+				B82CFFC24DAD540AB97CC94B /* SplashLayers in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -667,6 +692,7 @@
 				503AE0F817EB97AB00D1A890 /* Icon.icns in Resources */,
 				5087E75417EB910900C73F5D /* CloseSelected.png in Resources */,
 				5087E75517EB910900C73F5D /* HelloWorld.png in Resources */,
+				B82CFA5EE6A071289AC0B51D /* SplashLayers in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -682,6 +708,8 @@
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				1AFAF8B816D35DE700DB1158 /* HelloWorldScene.cpp in Sources */,
+				B82CF9B4BAE19BE0F02DFA1D /* SplashLayer.cpp in Sources */,
+				B82CF70871E5BC102F13D247 /* SplashScene.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -692,6 +720,8 @@
 				5087E75717EB910900C73F5D /* AppDelegate.cpp in Sources */,
 				5087E75817EB910900C73F5D /* HelloWorldScene.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
+				B82CFBD9AF5738AFE7D888F6 /* SplashLayer.cpp in Sources */,
+				B82CF94825A451AF5E6F10CB /* SplashScene.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
